@@ -8,6 +8,7 @@ class BuzzerManager:
 
     def __init__(self, target_port):
         self._target_port = target_port
+        GPIO.setup(target_port, GPIO.OUT)
 
     def turn_on_buzzer(self):
         for i in range(2):
